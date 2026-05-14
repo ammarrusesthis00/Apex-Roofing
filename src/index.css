@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1A3C6E;
+  --color-brand-blue-mid: #1E4A8A;
+  --color-brand-blue-light: #EBF0FA;
+  --color-brand-orange: #F97316;
+  --color-brand-orange-dark: #EA6C0A;
+  --color-brand-orange-light: #FFF4EC;
+  --color-brand-dark: #111827;
+  --color-brand-charcoal: #1F2937;
+  --color-brand-gray: #6B7280;
+  --color-brand-border: #E5E7EB;
+  --color-brand-surface: #F9FAFB;
+  --color-brand-white: #FFFFFF;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--color-brand-white);
+    color: var(--color-brand-charcoal);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-brand-dark);
+  }
+  a { text-decoration: none; color: inherit; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.anim-1 { animation: fadeUp 0.5s ease both; }
+.anim-2 { animation: fadeUp 0.5s ease 0.08s both; }
+.anim-3 { animation: fadeUp 0.5s ease 0.16s both; }
+.anim-4 { animation: fadeUp 0.5s ease 0.24s both; }
+.anim-5 { animation: fadeUp 0.5s ease 0.32s both; }
